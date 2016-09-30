@@ -7,7 +7,7 @@ sock.bind(('', 12000))
 sock.listen(1)
 
 def Time():
-    return str(datetime.datetime.now().minute) +"_"+ str(datetime.datetime.now().second)+"_"+ str(datetime.datetime.now().microsecond)
+    return str(datetime.datetime.now().day) +"_"+str(datetime.datetime.now().hour) +"_"+str(datetime.datetime.now().minute) +"_"+ str(datetime.datetime.now().second)+"_"+ str(datetime.datetime.now().microsecond)
 
 def CreateResponse():
     Html = "<html><body><h1>It works!</h1></body></html>"
