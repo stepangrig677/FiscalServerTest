@@ -12,7 +12,7 @@ def Time():
 def CreateResponse():
     Html = "<html><body><h1>It works!</h1></body></html>"
     Str = "HTTP/1.1 200 OK\nContent-type: text/html\nContent-Length:" + str(len(Html)) + "\n\n" + Html
-    return Str#bytes(Str)
+    return bytes(Str,"utf-8")
 
 
 def Accept():
@@ -33,4 +33,6 @@ def Accept():
 
 while True:
     Accept()
+
+
 
