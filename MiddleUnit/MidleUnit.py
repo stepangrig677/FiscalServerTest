@@ -3,7 +3,7 @@ import socket
 import datetime
 
 sock = socket.socket()
-sock.bind(('', 12000))
+sock.bind(('', 10000))
 sock.listen(1)
 
 def Time():
@@ -20,11 +20,11 @@ def CreateResponse(Message):
     #host = 'ofd.uc-itcom.ru'
     #port = 12654
 
-    host='kkm-server-test.1-ofd.ru'
-    port = 7777
+    #host='kkm-server-test.1-ofd.ru'
+    #port = 7777
 
-    #host = 'localhost'
-    #port = 12000
+    host = 'localhost'
+    port = 12000
 
     sock = socket.socket()
     sock.connect((host, port))
