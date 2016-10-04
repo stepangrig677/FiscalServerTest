@@ -23,7 +23,7 @@ def crc16(buffer, mode=CRC16_CCITT):
         crc16ret = 0xFFFF
     if (mode != CRC16) and (mode != CRC16_MODBUS):
         for l in buffer:
-            crc16ret ^= ord(l) << 8
+            crc16ret ^= int(l) << 8 #ord(l) << 8
             crc16ret &= 0xFFFF
             for i in range(0, 8):
                 if (crc16ret & 0x8000):
@@ -33,7 +33,7 @@ def crc16(buffer, mode=CRC16_CCITT):
                 crc16ret &= 0xFFFF
     else:
         for l in buffer:
-            crc16ret ^= ord(l)
+            crc16ret ^= int(l) #   ord(l)
             crc16ret &= 0xFFFF
             for i in range(8):
                 if (crc16ret & 0x0001):
@@ -42,6 +42,5 @@ def crc16(buffer, mode=CRC16_CCITT):
                     crc16ret = crc16ret >> 1
                 crc16ret &= 0xFFFF
 
-    return crc16ret
+    return hex(crc16ret)
 
-print(hex(crc16('hello world! hello world! hello world! hello world! hello world! ')))

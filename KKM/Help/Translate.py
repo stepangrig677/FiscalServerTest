@@ -1,6 +1,9 @@
-import binascii
+#import binascii
 
-def BytesHexString():
+def HexStringToHex():
+    return 0
+
+def HexToHexString():
     return 0
 
 def  HexToInt(s):
@@ -10,10 +13,12 @@ def  IntToHex(s):
     return hex(s)
 
 def  AsciiToHex(s):
-    return s.encode('hex')
+    return s.encode('CP866')
 
-def  HexToAscii():
-    return 0
+def  HexToAscii(s):
+    return s.decode('CP866')
 
-def HexToBin():
-    return 0
+def HexToBin(s):
+    return bin(s)
+
+print('Жопа'.encode('CP866').decode('CP866'))
