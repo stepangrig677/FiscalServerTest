@@ -11,9 +11,14 @@ def Time():
 #host='kkm-server-test.1-ofd.ru'
 #port = 7777
 
-host = 'localhost'
-port = 12000
+#host = 'localhost'
+#port = 12000
 
+#host = 'localhost'
+#port = 12000
+
+host = '188.225.35.208'
+port = 10000
 
 f = open('Start', 'rb')
 Message = f.read()
